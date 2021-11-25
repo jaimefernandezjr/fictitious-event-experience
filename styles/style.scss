@@ -1,0 +1,153 @@
+$heading_font_size: 130%;
+
+@mixin desc_properties{
+    padding-top: 3%;
+    font-size: 70%;
+    text-align: justify;
+}
+
+@mixin flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin planet_img_size {
+    width: 40%;
+    height: 40%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+body {
+    font-size: 36px;
+    background-image: url('https://cdn.astrobin.com/thumbs/bi9fMe8rHPmS_1824x0_68wTiyBy.jpg');
+    overflow-x: hidden;
+}
+
+.heading {
+    @include flex_column();
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 5%;
+    .title{
+        padding-top: 50px;
+        font-size: $heading_font_size;
+    }
+
+    .title2 {
+        font-size: $heading_font_size;
+    }
+
+    .subtitle{
+        padding-top: 15px;
+        font-size: 70%;
+        
+    }
+    .start {
+        padding-top: 10%;
+        font-size: 50%;
+        
+    }
+    .arrow-img {
+        width: 2%;
+        height: 5%;
+        transform: rotate(90deg);
+        padding-top: 5%;
+        margin-left: 5%;
+    }
+    .click-planet-text {
+        position: fixed;
+        font-size: 50%;
+        padding-top: 25%;
+        opacity: 0;
+    }
+    .ufo-img {
+        padding-top: 40%;
+        width: 10%;
+        position: fixed;
+
+        animation-name: 'wobble';
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes wobble {
+    0% {
+        top: -7%;
+    }
+    50% {
+        top: -5%;
+    }
+    100% {
+        top: -7%;
+    }
+}
+
+.intro-container {
+    .intro-text {
+        padding-top: 15%;
+        font-size: 75%;
+        margin: 0 10% 0 10%;
+        text-align: justify;
+        opacity: 0;
+    }
+}
+
+.planet-text {
+    opacity: 0;
+
+}
+.planet-img {
+    border-radius: 50%;
+}
+.planet-container {
+    display: flex;
+    padding-top: 50%;
+}
+.saturn-img {
+    border-radius: 0px;
+}
+.planet-right {
+    .planet-right-text {
+        @include flex_column();
+        width: 50%;
+        margin-left: 3%;
+        .desc {
+            @include desc_properties();
+        }
+    }
+    img {
+        @include planet_img_size();
+        padding-top: 1%;
+        margin-left: 5%;
+    }
+}
+
+.planet-left {
+    .planet-left-text {
+        @include flex_column();
+        width: 50%;
+        margin-left: 4%;
+        .desc {
+            @include desc_properties();
+        }
+    }
+    img {
+        @include planet_img_size();
+        padding-top: 1%;
+        margin-left: 2%;
+    }
+}
+
+footer {
+    font-size: 50%;
+    text-align: center;
+    padding-top: 40%;
+}
