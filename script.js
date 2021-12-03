@@ -48,22 +48,22 @@ $(function(){
 
     })
 
-    planetImages.hover(function(){
-        planetImages.animate({
-            width: '38%',
-            height: '38%'
-        }, 'fast')
-    })
+    // planetImages.hover(function(){
+    //     planetImages.animate({
+    //         width: '38%',
+    //         height: '38%'
+    //     }, 'fast')
+    // })
 
     planetImages.mouseleave(function(){
         planetText.css({
             opacity: '0'
         })
 
-        planetImages.animate({
-            width: '40%',
-            heght: '40%'
-        }, 'fast')
+    //     planetImages.animate({
+    //         width: '40%',
+    //         heght: '40%'
+    //     }, 'fast')
 
     })
     
